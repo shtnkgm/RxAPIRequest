@@ -14,7 +14,9 @@ import UIKit
  - xibでFile's OwnerのClassをViewControllerに設定
  - File's OwnerのOutletsのviewを作成したUIViewと紐付け
  */
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    @IBOutlet private weak var requestButton: UIButton!
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }

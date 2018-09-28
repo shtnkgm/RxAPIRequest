@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxAPIRequest" customModuleProvider="target">
             <connections>
+                <outlet property="requestButton" destination="KtB-K9-xMP" id="mVj-v7-gqP"/>
                 <outlet property="view" destination="vke-0c-P0n" id="hSN-Er-nXv"/>
             </connections>
         </placeholder>
