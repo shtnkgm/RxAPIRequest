@@ -7,6 +7,7 @@ target 'RxAPIRequest' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
+  pod 'SnapKit'
 
   # Pods for RxAPIRequest
 
