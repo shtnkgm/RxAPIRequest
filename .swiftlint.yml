@@ -80,10 +80,7 @@ opt_in_rules:
 - yoda_condition
 
 included:
-  - ImageTransition
-  - Demo
   
-# Lint対象から除外するパス
 excluded:
 
 line_length:

@@ -18,6 +18,8 @@
 		DACBB07D215ED1C200053ABE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07C215ED1C200053ABE /* Repository.swift */; };
 		DACBB07F215ED1CE00053ABE /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07E215ED1CE00053ABE /* RepositoryList.swift */; };
 		DACBB081215ED37800053ABE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACBB080215ED37800053ABE /* ViewController.xib */; };
+		DACBB084215ED91400053ABE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DACBB083215ED91400053ABE /* .swiftlint.yml */; };
+		DACBB086215ED91900053ABE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DACBB085215ED91900053ABE /* .gitignore */; };
 		DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */; };
 		EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		DACBB07C215ED1C200053ABE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DACBB07E215ED1CE00053ABE /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
 		DACBB080215ED37800053ABE /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		DACBB083215ED91400053ABE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		DACBB085215ED91900053ABE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		DACBB046215E43CA00053ABE = {
 			isa = PBXGroup;
 			children = (
+				DACBB082215ED90200053ABE /* Config */,
 				DACBB051215E43CA00053ABE /* RxAPIRequest */,
 				DACBB066215E43CC00053ABE /* RxAPIRequestTests */,
 				DACBB050215E43CA00053ABE /* Products */,
@@ -149,6 +154,15 @@
 				DACBB076215ECBFE00053ABE /* repository_list.json */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		DACBB082215ED90200053ABE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DACBB085215ED91900053ABE /* .gitignore */,
+				DACBB083215ED91400053ABE /* .swiftlint.yml */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACBB084215ED91400053ABE /* .swiftlint.yml in Resources */,
+				DACBB086215ED91900053ABE /* .gitignore in Resources */,
 				DACBB081215ED37800053ABE /* ViewController.xib in Resources */,
 				DACBB05D215E43CC00053ABE /* LaunchScreen.storyboard in Resources */,
 				DACBB074215ECBD200053ABE /* user_info_api.json in Resources */,
