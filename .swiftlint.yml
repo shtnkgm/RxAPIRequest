@@ -80,8 +80,11 @@ opt_in_rules:
 - yoda_condition
 
 included:
+- RxAPIRequest
   
 excluded:
+- Pods
+- Carthage
 
 line_length:
 - 200   # warning

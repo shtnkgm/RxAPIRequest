@@ -177,6 +177,7 @@
 				DACBB04C215E43CA00053ABE /* Frameworks */,
 				DACBB04D215E43CA00053ABE /* Resources */,
 				7B1B3CCDDDD844BF33422F87 /* [CP] Embed Pods Frameworks */,
+				DACBB089215ED99700053ABE /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -320,6 +321,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxAPIRequest/Pods-RxAPIRequest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DACBB089215ED99700053ABE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint\n  ${PODS_ROOT}/SwiftLint/swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		E0946377588B6A59A04EF957 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
