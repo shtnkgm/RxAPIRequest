@@ -1,0 +1,6 @@
+framework module Pods_RxAPIRequestTests {
+  umbrella header "Pods-RxAPIRequestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

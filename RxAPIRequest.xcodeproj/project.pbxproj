@@ -13,6 +13,8 @@
 		DACBB05A215E43CC00053ABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACBB059215E43CC00053ABE /* Assets.xcassets */; };
 		DACBB05D215E43CC00053ABE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */; };
 		DACBB068215E43CC00053ABE /* RxAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB067215E43CC00053ABE /* RxAPIRequestTests.swift */; };
+		DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */; };
+		EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E41C412C29DB2BF29703658 /* Pods-RxAPIRequestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAPIRequestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxAPIRequestTests/Pods-RxAPIRequestTests.release.xcconfig"; sourceTree = "<group>"; };
+		4110C97F1D5AA82B88110597 /* Pods-RxAPIRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAPIRequest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxAPIRequest/Pods-RxAPIRequest.debug.xcconfig"; sourceTree = "<group>"; };
+		4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxAPIRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D230098F5B7C16FBE3DB2A /* Pods-RxAPIRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAPIRequest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxAPIRequest/Pods-RxAPIRequest.release.xcconfig"; sourceTree = "<group>"; };
+		BCE8B786968327ED47BD5091 /* Pods-RxAPIRequestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAPIRequestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxAPIRequestTests/Pods-RxAPIRequestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxAPIRequestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACBB04F215E43CA00053ABE /* RxAPIRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxAPIRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACBB052215E43CB00053ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACBB054215E43CB00053ABE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		792181288044DBD7C02F6013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */,
+				C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A61CD238B12368BD8607E2D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4110C97F1D5AA82B88110597 /* Pods-RxAPIRequest.debug.xcconfig */,
+				89D230098F5B7C16FBE3DB2A /* Pods-RxAPIRequest.release.xcconfig */,
+				BCE8B786968327ED47BD5091 /* Pods-RxAPIRequestTests.debug.xcconfig */,
+				0E41C412C29DB2BF29703658 /* Pods-RxAPIRequestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DACBB046215E43CA00053ABE = {
 			isa = PBXGroup;
 			children = (
 				DACBB051215E43CA00053ABE /* RxAPIRequest */,
 				DACBB066215E43CC00053ABE /* RxAPIRequestTests */,
 				DACBB050215E43CA00053ABE /* Products */,
+				A61CD238B12368BD8607E2D2 /* Pods */,
+				792181288044DBD7C02F6013 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DACBB06C215E43CC00053ABE /* Build configuration list for PBXNativeTarget "RxAPIRequest" */;
 			buildPhases = (
+				0B7DA0EF96304327DD0DEF8A /* [CP] Check Pods Manifest.lock */,
 				DACBB04B215E43CA00053ABE /* Sources */,
 				DACBB04C215E43CA00053ABE /* Frameworks */,
 				DACBB04D215E43CA00053ABE /* Resources */,
+				7B1B3CCDDDD844BF33422F87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DACBB06F215E43CC00053ABE /* Build configuration list for PBXNativeTarget "RxAPIRequestTests" */;
 			buildPhases = (
+				E0946377588B6A59A04EF957 /* [CP] Check Pods Manifest.lock */,
 				DACBB05F215E43CC00053ABE /* Sources */,
 				DACBB060215E43CC00053ABE /* Frameworks */,
 				DACBB061215E43CC00053ABE /* Resources */,
@@ -191,6 +226,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B7DA0EF96304327DD0DEF8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxAPIRequest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B1B3CCDDDD844BF33422F87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxAPIRequest/Pods-RxAPIRequest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxAPIRequest/Pods-RxAPIRequest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0946377588B6A59A04EF957 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxAPIRequestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DACBB04B215E43CA00053ABE /* Sources */ = {
@@ -358,6 +466,7 @@
 		};
 		DACBB06D215E43CC00053ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4110C97F1D5AA82B88110597 /* Pods-RxAPIRequest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +485,7 @@
 		};
 		DACBB06E215E43CC00053ABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D230098F5B7C16FBE3DB2A /* Pods-RxAPIRequest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +504,7 @@
 		};
 		DACBB070215E43CC00053ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE8B786968327ED47BD5091 /* Pods-RxAPIRequestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +526,7 @@
 		};
 		DACBB071215E43CC00053ABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E41C412C29DB2BF29703658 /* Pods-RxAPIRequestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
