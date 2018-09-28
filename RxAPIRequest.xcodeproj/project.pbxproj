@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DACBB053215E43CB00053ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB052215E43CB00053ABE /* AppDelegate.swift */; };
 		DACBB055215E43CB00053ABE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB054215E43CB00053ABE /* ViewController.swift */; };
-		DACBB058215E43CB00053ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACBB056215E43CB00053ABE /* Main.storyboard */; };
 		DACBB05A215E43CC00053ABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACBB059215E43CC00053ABE /* Assets.xcassets */; };
 		DACBB05D215E43CC00053ABE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */; };
 		DACBB068215E43CC00053ABE /* RxAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB067215E43CC00053ABE /* RxAPIRequestTests.swift */; };
@@ -18,6 +17,7 @@
 		DACBB07B215ED1B700053ABE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07A215ED1B700053ABE /* UserInfo.swift */; };
 		DACBB07D215ED1C200053ABE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07C215ED1C200053ABE /* Repository.swift */; };
 		DACBB07F215ED1CE00053ABE /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07E215ED1CE00053ABE /* RepositoryList.swift */; };
+		DACBB081215ED37800053ABE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACBB080215ED37800053ABE /* ViewController.xib */; };
 		DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */; };
 		EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		DACBB04F215E43CA00053ABE /* RxAPIRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxAPIRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACBB052215E43CB00053ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACBB054215E43CB00053ABE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DACBB057215E43CB00053ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DACBB059215E43CC00053ABE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACBB05C215E43CC00053ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DACBB05E215E43CC00053ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		DACBB07A215ED1B700053ABE /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		DACBB07C215ED1C200053ABE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DACBB07E215ED1CE00053ABE /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
+		DACBB080215ED37800053ABE /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +122,10 @@
 				DACBB072215ECB9000053ABE /* API */,
 				DACBB052215E43CB00053ABE /* AppDelegate.swift */,
 				DACBB054215E43CB00053ABE /* ViewController.swift */,
+				DACBB080215ED37800053ABE /* ViewController.xib */,
 				DACBB07A215ED1B700053ABE /* UserInfo.swift */,
 				DACBB07C215ED1C200053ABE /* Repository.swift */,
 				DACBB07E215ED1CE00053ABE /* RepositoryList.swift */,
-				DACBB056215E43CB00053ABE /* Main.storyboard */,
 				DACBB059215E43CC00053ABE /* Assets.xcassets */,
 				DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */,
 				DACBB05E215E43CC00053ABE /* Info.plist */,
@@ -235,11 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACBB081215ED37800053ABE /* ViewController.xib in Resources */,
 				DACBB05D215E43CC00053ABE /* LaunchScreen.storyboard in Resources */,
 				DACBB074215ECBD200053ABE /* user_info_api.json in Resources */,
 				DACBB05A215E43CC00053ABE /* Assets.xcassets in Resources */,
 				DACBB077215ECBFE00053ABE /* repository_list.json in Resources */,
-				DACBB058215E43CB00053ABE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DACBB056215E43CB00053ABE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DACBB057215E43CB00053ABE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -8,7 +8,21 @@
 
 import UIKit
 
+/**
+ ### XIBとの紐付け方法
+ - UIViewを貼り付け
+ - xibでFile's OwnerのClassをViewControllerに設定
+ - File's OwnerのOutletsのviewを作成したUIViewと紐付け
+ */
 class ViewController: UIViewController {
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
