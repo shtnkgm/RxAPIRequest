@@ -15,6 +15,9 @@
 		DACBB068215E43CC00053ABE /* RxAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB067215E43CC00053ABE /* RxAPIRequestTests.swift */; };
 		DACBB074215ECBD200053ABE /* user_info_api.json in Resources */ = {isa = PBXBuildFile; fileRef = DACBB073215ECBD200053ABE /* user_info_api.json */; };
 		DACBB077215ECBFE00053ABE /* repository_list.json in Resources */ = {isa = PBXBuildFile; fileRef = DACBB076215ECBFE00053ABE /* repository_list.json */; };
+		DACBB07B215ED1B700053ABE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07A215ED1B700053ABE /* UserInfo.swift */; };
+		DACBB07D215ED1C200053ABE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07C215ED1C200053ABE /* Repository.swift */; };
+		DACBB07F215ED1CE00053ABE /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB07E215ED1CE00053ABE /* RepositoryList.swift */; };
 		DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */; };
 		EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,9 @@
 		DACBB069215E43CC00053ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACBB073215ECBD200053ABE /* user_info_api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user_info_api.json; sourceTree = "<group>"; };
 		DACBB076215ECBFE00053ABE /* repository_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = repository_list.json; sourceTree = "<group>"; };
+		DACBB07A215ED1B700053ABE /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		DACBB07C215ED1C200053ABE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DACBB07E215ED1CE00053ABE /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,9 @@
 				DACBB072215ECB9000053ABE /* API */,
 				DACBB052215E43CB00053ABE /* AppDelegate.swift */,
 				DACBB054215E43CB00053ABE /* ViewController.swift */,
+				DACBB07A215ED1B700053ABE /* UserInfo.swift */,
+				DACBB07C215ED1C200053ABE /* Repository.swift */,
+				DACBB07E215ED1CE00053ABE /* RepositoryList.swift */,
 				DACBB056215E43CB00053ABE /* Main.storyboard */,
 				DACBB059215E43CC00053ABE /* Assets.xcassets */,
 				DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */,
@@ -325,8 +334,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACBB07F215ED1CE00053ABE /* RepositoryList.swift in Sources */,
 				DACBB055215E43CB00053ABE /* ViewController.swift in Sources */,
+				DACBB07B215ED1B700053ABE /* UserInfo.swift in Sources */,
 				DACBB053215E43CB00053ABE /* AppDelegate.swift in Sources */,
+				DACBB07D215ED1C200053ABE /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
