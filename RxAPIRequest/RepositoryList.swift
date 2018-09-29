@@ -27,7 +27,7 @@ extension RepositoryList: Collection {
         return repositories[index]
     }
 
-    public func index(after index: Index) -> Int {
+    public func index(after index: Int) -> Int {
         return index + 1
     }
 }

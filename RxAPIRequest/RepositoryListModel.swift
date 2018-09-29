@@ -10,7 +10,7 @@ import Alamofire
 import Foundation
 
 struct RepositoryListModel {
-    func request(userId: String, completion: @escaping (RepositoryList?) -> Void) {
+    func request(userIdentifier: String, completion: @escaping (RepositoryList?) -> Void) {
         let urlString = "https://raw.githubusercontent.com/shtnkgm/RxAPIRequest/master/RxAPIRequest/API/repository_list.json"
         Alamofire.request(urlString, method: .get).responseJSON { response in
             guard let data = response.data else {

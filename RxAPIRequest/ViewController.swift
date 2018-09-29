@@ -37,9 +37,13 @@ final class ViewController: UIViewController {
 
         requestButton.rx.tap.subscribe(onNext: { [weak self] in
             print("リクエストボタンタップ")
-            self?.userInfoModel.request { _ in
-                self?.repositoryListModel.request(userId: "") { _ in
-
+            self?.userInfoModel.request { userInfo in
+                guard let userIdentifier = userInfo?.identifier else { return }
+                self?.repositoryListModel.request(userIdentifier: userIdentifier) { repositoryList in
+                    guard let repositoryList = repositoryList else { return }
+                    repositoryList.forEach {
+                        print($0.title)
+                    }
                 }
             }
         }).disposed(by: disposeBag)
