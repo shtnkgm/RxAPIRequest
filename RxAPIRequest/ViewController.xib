@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxAPIRequest" customModuleProvider="target">
             <connections>
                 <outlet property="requestButton" destination="KtB-K9-xMP" id="mVj-v7-gqP"/>
+                <outlet property="rxRequestButton" destination="p9k-aY-o6x" id="ooO-iB-eCL"/>
                 <outlet property="view" destination="vke-0c-P0n" id="hSN-Er-nXv"/>
             </connections>
         </placeholder>
@@ -35,10 +36,24 @@
                         <action selector="requestButtonTapped:" destination="-1" eventType="touchUpInside" id="daQ-vA-GYS"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9k-aY-o6x">
+                    <rect key="frame" x="87.5" y="385.5" width="200" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2uW-Ij-BHU"/>
+                        <constraint firstAttribute="width" constant="200" id="gFc-3u-aff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <state key="normal" title="Rx Request">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="KtB-K9-xMP" firstAttribute="centerY" secondItem="vke-0c-P0n" secondAttribute="centerY" id="4cm-e6-Wfg"/>
+                <constraint firstItem="p9k-aY-o6x" firstAttribute="top" secondItem="KtB-K9-xMP" secondAttribute="bottom" constant="30" id="TaS-mW-bsF"/>
+                <constraint firstItem="p9k-aY-o6x" firstAttribute="centerX" secondItem="vke-0c-P0n" secondAttribute="centerX" id="f8S-IC-qU4"/>
                 <constraint firstItem="KtB-K9-xMP" firstAttribute="centerX" secondItem="vke-0c-P0n" secondAttribute="centerX" id="hpO-aw-N7J"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="PFm-lf-3q6"/>

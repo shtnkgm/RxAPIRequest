@@ -18,6 +18,7 @@ import UIKit
  */
 final class ViewController: UIViewController {
     @IBOutlet private weak var requestButton: UIButton!
+    @IBOutlet private weak var rxRequestButton: UIButton!
 
     private let userInfoModel: UserInfoModel
     private let repositoryListModel: RepositoryListModel
@@ -38,8 +39,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestButton.rx.tap.subscribe(onNext: {
-
+        rxRequestButton.rx.tap.subscribe(onNext: {
+            print("Rxリクエストボタンタップ")
         }).disposed(by: disposeBag)
     }
 
