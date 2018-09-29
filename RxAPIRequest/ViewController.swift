@@ -19,12 +19,14 @@ import UIKit
 final class ViewController: UIViewController {
     @IBOutlet private weak var requestButton: UIButton!
 
-    private let userInfoModel: UserInfoModel = UserInfoModel()
-    private let repositoryListModel: RepositoryListModel = RepositoryListModel()
-
+    private let userInfoModel: UserInfoModel
+    private let repositoryListModel: RepositoryListModel
     private let disposeBag = DisposeBag()
 
-    init() {
+    init(userInfoModel: UserInfoModel = UserInfoModel(),
+         repositoryListModel: RepositoryListModel = RepositoryListModel()) {
+        self.userInfoModel = userInfoModel
+        self.repositoryListModel = repositoryListModel
         super.init(nibName: nil, bundle: nil)
     }
 
