@@ -46,6 +46,10 @@ final class ViewController: UIViewController {
 
     @IBAction private func requestButtonTapped(_ sender: UIButton) {
         print("リクエストボタンタップ")
+        getUserInfo()
+    }
+
+    private func getUserInfo() {
         userInfoModel.request { [weak self] result in
             switch result {
             case .success(let userInfo):
