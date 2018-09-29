@@ -50,14 +50,14 @@ struct APIClient<T: Codable> {
             .responseJSON { response in
                 switch response.result {
                 case .success:
-                    guard let data = response.data else {
+                    guard let jsonData = response.data else {
                         completion(Result.failure(APIClientError.emptyResponseError))
                         return
                     }
                     do {
                         let jsonDecoder = JSONDecoder()
                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let data = try jsonDecoder.decode(T.self, from: data)
+                        let data = try jsonDecoder.decode(T.self, from: jsonData)
                         completion(Result.success(data))
                     } catch {
                         completion(Result.failure(APIClientError.parseError(error)))
@@ -74,9 +74,9 @@ struct APIClient<T: Codable> {
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
-                    case .success(let jsonData):
+                    case .success:
                         do {
-                            guard let jsonData = jsonData as? Data else {
+                            guard let jsonData = response.data else {
                                 observer.onError(APIClientError.emptyResponseError)
                                 return
                             }

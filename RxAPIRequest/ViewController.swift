@@ -45,8 +45,9 @@ final class ViewController: UIViewController {
 
         rxRequestButton.rx.tap
             .flatMapLatest { self.userInfoModel.rxRequest() }
+            .flatMap { self.repositoryListModel.rxRequest(userIdentifier: $0.identifier) }
             .subscribe(onNext: { _ in
-                print("UserInfoリクエスト成功")
+                print("リクエスト成功")
             }, onError: { error in
                 print(error)
             }).disposed(by: disposeBag)
