@@ -48,11 +48,11 @@ final class ViewController: UIViewController {
         userInfoModel.request { [weak self] result in
             switch result {
             case .success(let userInfo):
-                print("UserInfoModel Request Success")
+                print("UserInfoリクエスト成功")
                 self?.repositoryListModel.request(userIdentifier: userInfo.identifier) { result in
                     switch result {
                     case .success(let repositoryList):
-                        print("RepositoryListModel Request Success")
+                        print("RepositoryListリクエスト成功")
                         self?.repositoryList = repositoryList
                     case .failure(let error):
                         print("\(error)")
