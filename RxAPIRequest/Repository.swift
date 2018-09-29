@@ -9,7 +9,7 @@
 import Foundation
 
 struct Repository: Codable {
-    let user_identifier: String
+    let userIdentifier: String
     let title: String
     let url: String
 }
