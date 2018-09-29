@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Shota Nakagami. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 
 struct RepositoryListModel {
@@ -17,7 +16,7 @@ struct RepositoryListModel {
     }
 
     func request(userIdentifier: String, completion: @escaping (RepositoryList?) -> Void) {
-        let parameters: Parameters = ["userIdentifier": userIdentifier]
+        let parameters = ["userIdentifier": userIdentifier]
         apiClient.request(api: .repositoryList(parameters)) { result in
             switch result {
             case .success(let value): completion(value)

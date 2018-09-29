@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Shota Nakagami. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 
 struct UserInfoModel {
