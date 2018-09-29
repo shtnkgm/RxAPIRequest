@@ -9,18 +9,17 @@
 import Foundation
 
 struct UserInfoModel {
-    private let apiClient: APIClient<UserInfo>
+    typealias ResponseType = UserInfo
 
-    init(apiClient: APIClient<UserInfo> = APIClient()) {
+    private let apiClient: APIClient<ResponseType>
+
+    init(apiClient: APIClient<ResponseType> = APIClient()) {
         self.apiClient = apiClient
     }
 
-    func request(completion: @escaping (UserInfo?) -> Void) {
+    func request(completion: @escaping (Result<ResponseType>) -> Void) {
         apiClient.request(api: .userInfo) { result in
-            switch result {
-            case .success(let value): completion(value)
-            case .failure: completion(nil)
-            }
+            completion(result)
         }
     }
 }

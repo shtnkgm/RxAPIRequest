@@ -9,19 +9,18 @@
 import Foundation
 
 struct RepositoryListModel {
-    private let apiClient: APIClient<RepositoryList>
+    typealias ResponseType = RepositoryList
 
-    init(apiClient: APIClient<RepositoryList> = APIClient()) {
+    private let apiClient: APIClient<ResponseType>
+
+    init(apiClient: APIClient<ResponseType> = APIClient()) {
         self.apiClient = apiClient
     }
 
-    func request(userIdentifier: String, completion: @escaping (RepositoryList?) -> Void) {
-        let parameters = ["userIdentifier": userIdentifier]
+    func request(userIdentifier: String, completion: @escaping (Result<ResponseType>) -> Void) {
+        let parameters = ["user_identifier": userIdentifier]
         apiClient.request(api: .repositoryList(parameters)) { result in
-            switch result {
-            case .success(let value): completion(value)
-            case .failure: completion(nil)
-            }
+            completion(result)
         }
     }
 }

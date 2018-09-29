@@ -10,11 +10,6 @@ import Alamofire
 import Foundation
 
 struct APIClient<T: Codable> {
-    enum Result<T: Codable> {
-        case success(T)
-        case failure(Error)
-    }
-
     enum API {
         case userInfo
         case repositoryList(Parameters)
@@ -43,7 +38,8 @@ struct APIClient<T: Codable> {
     }
 
     enum APIClientError: Error {
-        case connectionError
+        case emptyResponseError
+        case connectionError(Error)
         case parseError(Error)
     }
 
@@ -54,23 +50,19 @@ struct APIClient<T: Codable> {
                 switch response.result {
                 case .success:
                     guard let data = response.data else {
-                        print("データの取得に失敗: \(response)")
-                        completion(Result.failure(APIClientError.connectionError))
+                        completion(Result.failure(APIClientError.emptyResponseError))
                         return
                     }
                     do {
                         let jsonDecoder = JSONDecoder()
                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                         let data = try jsonDecoder.decode(T.self, from: data)
-                        print("データの取得に成功: \(data)")
                         completion(Result.success(data))
                     } catch {
-                        print("JSONのデコードに失敗: \(error)")
                         completion(Result.failure(APIClientError.parseError(error)))
                     }
                 case .failure(let error):
-                    print("データの取得に失敗: \(error)")
-                    completion(Result.failure(APIClientError.connectionError))
+                    completion(Result.failure(APIClientError.connectionError(error)))
                 }
         }
     }

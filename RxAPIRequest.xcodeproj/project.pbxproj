@@ -23,6 +23,7 @@
 		DACBB08B215FAC3D00053ABE /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB08A215FAC3D00053ABE /* UserInfoModel.swift */; };
 		DACBB08D215FAC7B00053ABE /* RepositoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB08C215FAC7B00053ABE /* RepositoryListModel.swift */; };
 		DACBB091215FC40200053ABE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB090215FC40200053ABE /* APIClient.swift */; };
+		DACBB095215FCF5900053ABE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBB094215FCF5900053ABE /* Result.swift */; };
 		DB932AE8F2EB920E1A63B6A4 /* Pods_RxAPIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954DAEE9CA06CF6432CF2EA /* Pods_RxAPIRequest.framework */; };
 		EE0A52C94A03262623F46E24 /* Pods_RxAPIRequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AFA62EF4338DC40794681 /* Pods_RxAPIRequestTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		DACBB08A215FAC3D00053ABE /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		DACBB08C215FAC7B00053ABE /* RepositoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListModel.swift; sourceTree = "<group>"; };
 		DACBB090215FC40200053ABE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DACBB094215FCF5900053ABE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				DACBB052215E43CB00053ABE /* AppDelegate.swift */,
 				DACBB054215E43CB00053ABE /* ViewController.swift */,
 				DACBB080215ED37800053ABE /* ViewController.xib */,
+				DACBB094215FCF5900053ABE /* Result.swift */,
 				DACBB090215FC40200053ABE /* APIClient.swift */,
 				DACBB08A215FAC3D00053ABE /* UserInfoModel.swift */,
 				DACBB07A215ED1B700053ABE /* UserInfo.swift */,
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACBB095215FCF5900053ABE /* Result.swift in Sources */,
 				DACBB08B215FAC3D00053ABE /* UserInfoModel.swift in Sources */,
 				DACBB08D215FAC7B00053ABE /* RepositoryListModel.swift in Sources */,
 				DACBB07F215ED1CE00053ABE /* RepositoryList.swift in Sources */,

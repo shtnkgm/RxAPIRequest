@@ -44,13 +44,19 @@ final class ViewController: UIViewController {
 
     @IBAction private func requestButtonTapped(_ sender: UIButton) {
         print("リクエストボタンタップ")
-        userInfoModel.request { [weak self] userInfo in
-            guard let userIdentifier = userInfo?.identifier else { return }
-            self?.repositoryListModel.request(userIdentifier: userIdentifier) { repositoryList in
-                guard let repositoryList = repositoryList else { return }
-                repositoryList.forEach {
-                    print($0.title)
+        userInfoModel.request { [weak self] result in
+            switch result {
+            case .success(let userInfo):
+                self?.repositoryListModel.request(userIdentifier: userInfo.identifier) { result in
+                    switch result {
+                    case .success(let repositoryList):
+                        print("success")
+                    case .failure(let error):
+                        print("\(error)")
+                    }
                 }
+            case .failure(let error):
+                print("\(error)")
             }
         }
     }
