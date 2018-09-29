@@ -22,6 +22,7 @@ final class ViewController: UIViewController {
     private let userInfoModel: UserInfoModel
     private let repositoryListModel: RepositoryListModel
     private let disposeBag = DisposeBag()
+    private var repositoryList: RepositoryList?
 
     init(userInfoModel: UserInfoModel = UserInfoModel(),
          repositoryListModel: RepositoryListModel = RepositoryListModel()) {
@@ -47,10 +48,12 @@ final class ViewController: UIViewController {
         userInfoModel.request { [weak self] result in
             switch result {
             case .success(let userInfo):
+                print("UserInfoModel Request Success")
                 self?.repositoryListModel.request(userIdentifier: userInfo.identifier) { result in
                     switch result {
                     case .success(let repositoryList):
-                        print("success")
+                        print("RepositoryListModel Request Success")
+                        self?.repositoryList = repositoryList
                     case .failure(let error):
                         print("\(error)")
                     }
