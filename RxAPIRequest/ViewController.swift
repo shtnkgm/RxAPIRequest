@@ -39,11 +39,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        rxRequestButton.rx.tap.subscribe(onNext: {
-            print("Rxリクエストボタンタップ")
-        }).disposed(by: disposeBag)
-
         rxRequestButton.rx.tap
+            .do(onNext: { _ in print("Rxリクエストボタンタップ") })
             .flatMapLatest { self.userInfoModel.rxRequest() }
             .do(onNext: { _ in print("UserInfoリクエスト成功") })
             .flatMap { self.repositoryListModel.rxRequest(userIdentifier: $0.identifier) }
