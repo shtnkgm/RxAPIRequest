@@ -35,17 +35,21 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestButton.rx.tap.subscribe(onNext: { [weak self] in
-            print("リクエストボタンタップ")
-            self?.userInfoModel.request { userInfo in
-                guard let userIdentifier = userInfo?.identifier else { return }
-                self?.repositoryListModel.request(userIdentifier: userIdentifier) { repositoryList in
-                    guard let repositoryList = repositoryList else { return }
-                    repositoryList.forEach {
-                        print($0.title)
-                    }
+        requestButton.rx.tap.subscribe(onNext: {
+
+        }).disposed(by: disposeBag)
+    }
+
+    @IBAction private func requestButtonTapped(_ sender: UIButton) {
+        print("リクエストボタンタップ")
+        userInfoModel.request { [weak self] userInfo in
+            guard let userIdentifier = userInfo?.identifier else { return }
+            self?.repositoryListModel.request(userIdentifier: userIdentifier) { repositoryList in
+                guard let repositoryList = repositoryList else { return }
+                repositoryList.forEach {
+                    print($0.title)
                 }
             }
-        }).disposed(by: disposeBag)
+        }
     }
 }
