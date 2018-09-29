@@ -5,9 +5,9 @@
         "url": "https://github.com/shtnkgm/ImageTransition"
     },
     {
-        "user_identifier": "foo",
-        "title": "HelloWorld",
-        "url": "https://github.com/foo/HelloWorld"
+        "user_identifier": "shtnkgm",
+        "title": "VisionFrameworkSample",
+        "url": "https://github.com/shtnkgm/VisionFrameworkSample"
     },
     {
         "user_identifier": "shtnkgm",
@@ -15,8 +15,8 @@
         "url": "https://github.com/shtnkgm/RxAPIRequest"
     },
     {
-        "user_identifier": "bar",
-        "title": "HyperNetworking",
-        "url": "https://github.com/bar/HyperNetworking"
+        "user_identifier": "shtnkgm",
+        "title": "RxSwiftPlaygroundSample",
+        "url": "https://github.com/shtnkgm/RxSwiftPlaygroundSample"
     }
 ]
