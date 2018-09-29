@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxAPIRequest" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="dLa-k5-rZQ" id="ECt-40-k0c"/>
                 <outlet property="requestButton" destination="KtB-K9-xMP" id="mVj-v7-gqP"/>
                 <outlet property="rxRequestButton" destination="p9k-aY-o6x" id="ooO-iB-eCL"/>
                 <outlet property="view" destination="vke-0c-P0n" id="hSN-Er-nXv"/>
@@ -48,15 +50,28 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLa-k5-rZQ">
+                    <rect key="frame" x="37.5" y="81.5" width="300" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="huT-Qi-jTr"/>
+                        <constraint firstAttribute="width" constant="300" id="lpv-dW-FkP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="KtB-K9-xMP" firstAttribute="centerY" secondItem="vke-0c-P0n" secondAttribute="centerY" id="4cm-e6-Wfg"/>
                 <constraint firstItem="p9k-aY-o6x" firstAttribute="top" secondItem="KtB-K9-xMP" secondAttribute="bottom" constant="30" id="TaS-mW-bsF"/>
+                <constraint firstItem="dLa-k5-rZQ" firstAttribute="centerX" secondItem="vke-0c-P0n" secondAttribute="centerX" id="aXx-vY-Ddo"/>
                 <constraint firstItem="p9k-aY-o6x" firstAttribute="centerX" secondItem="vke-0c-P0n" secondAttribute="centerX" id="f8S-IC-qU4"/>
                 <constraint firstItem="KtB-K9-xMP" firstAttribute="centerX" secondItem="vke-0c-P0n" secondAttribute="centerX" id="hpO-aw-N7J"/>
+                <constraint firstItem="KtB-K9-xMP" firstAttribute="top" secondItem="dLa-k5-rZQ" secondAttribute="bottom" constant="30" id="nxw-fA-yuz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="PFm-lf-3q6"/>
+            <point key="canvasLocation" x="-799.20000000000005" y="33.733133433283363"/>
         </view>
     </objects>
 </document>

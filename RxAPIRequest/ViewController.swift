@@ -19,11 +19,11 @@ import UIKit
 final class ViewController: UIViewController {
     @IBOutlet private weak var requestButton: UIButton!
     @IBOutlet private weak var rxRequestButton: UIButton!
+    @IBOutlet private weak var label: UILabel!
 
     private let userInfoModel: UserInfoModel
     private let repositoryListModel: RepositoryListModel
     private let disposeBag = DisposeBag()
-    private var repositoryList: RepositoryList?
 
     init(userInfoModel: UserInfoModel = UserInfoModel(),
          repositoryListModel: RepositoryListModel = RepositoryListModel()) {
@@ -40,19 +40,23 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
 
         rxRequestButton.rx.tap
-            .do(onNext: { _ in print("Rxリクエストボタンタップ") })
+            .do(onNext: { _ in
+                self.label.text = "loading..."
+                print("Rxリクエストボタンタップ")
+            })
             .flatMapLatest { self.userInfoModel.rxRequest() }
             .do(onNext: { _ in print("UserInfoリクエスト成功") })
             .flatMap { self.repositoryListModel.rxRequest(userIdentifier: $0.identifier) }
-            .subscribe(onNext: { _ in
-                print("RepositoryListリクエスト成功")
-            }, onError: { error in
-                print(error)
-            }).disposed(by: disposeBag)
+            .do(onNext: { _ in print("RepositoryListリクエスト成功") })
+            .do(onError: { print($0) })
+            .map { $0.map { $0.title }.joined(separator: "\n") }
+            .bind(to: self.label.rx.text)
+            .disposed(by: disposeBag)
     }
 
     @IBAction private func requestButtonTapped(_ sender: UIButton) {
         print("リクエストボタンタップ")
+        label.text = "loading..."
         getUserInfo()
     }
 
@@ -65,7 +69,7 @@ final class ViewController: UIViewController {
                     switch result {
                     case .success(let repositoryList):
                         print("RepositoryListリクエスト成功")
-                        self?.repositoryList = repositoryList
+                        self?.label.text = repositoryList.map { $0.title }.joined(separator: "\n")
                     case .failure(let error):
                         print(error)
                     }
