@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct RepositoryListModel {
     typealias ResponseType = RepositoryList
@@ -22,5 +23,10 @@ struct RepositoryListModel {
         apiClient.request(api: .repositoryList(parameters)) { result in
             completion(result)
         }
+    }
+
+    func rxRequest(userIdentifier: String) -> Observable<ResponseType> {
+        let parameters = ["user_identifier": userIdentifier]
+        return apiClient.rxRequest(api: .repositoryList(parameters))
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct UserInfoModel {
     typealias ResponseType = UserInfo
@@ -21,5 +22,9 @@ struct UserInfoModel {
         apiClient.request(api: .userInfo) { result in
             completion(result)
         }
+    }
+
+    func rxRequest() -> Observable<ResponseType> {
+        return apiClient.rxRequest(api: .userInfo)
     }
 }

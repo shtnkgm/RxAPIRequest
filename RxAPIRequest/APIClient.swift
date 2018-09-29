@@ -8,6 +8,7 @@
 
 import Alamofire
 import Foundation
+import RxSwift
 
 struct APIClient<T: Codable> {
     enum API {
@@ -64,6 +65,33 @@ struct APIClient<T: Codable> {
                 case .failure(let error):
                     completion(Result.failure(APIClientError.connectionError(error)))
                 }
+        }
+    }
+
+    func rxRequest(api: API) -> Observable<T> {
+        return Observable<T>.create { observer -> Disposable in
+            Alamofire.request(api.urlString, method: api.method, parameters: api.parameters)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let jsonData):
+                        do {
+                            guard let jsonData = jsonData as? Data else {
+                                observer.onError(APIClientError.emptyResponseError)
+                                return
+                            }
+                            let jsonDecoder = JSONDecoder()
+                            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                            let data = try jsonDecoder.decode(T.self, from: jsonData)
+                            observer.onNext(data)
+                        } catch {
+                            observer.onError(APIClientError.parseError(error))
+                        }
+                    case .failure(let error):
+                        observer.onError(APIClientError.connectionError(error))
+                    }
+            }
+            return Disposables.create()
         }
     }
 }
