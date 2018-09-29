@@ -42,6 +42,14 @@ final class ViewController: UIViewController {
         rxRequestButton.rx.tap.subscribe(onNext: {
             print("Rxリクエストボタンタップ")
         }).disposed(by: disposeBag)
+
+        rxRequestButton.rx.tap
+            .flatMapLatest { self.userInfoModel.rxRequest() }
+            .subscribe(onNext: { _ in
+                print("UserInfoリクエスト成功")
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
     }
 
     @IBAction private func requestButtonTapped(_ sender: UIButton) {
@@ -60,11 +68,11 @@ final class ViewController: UIViewController {
                         print("RepositoryListリクエスト成功")
                         self?.repositoryList = repositoryList
                     case .failure(let error):
-                        print("\(error)")
+                        print(error)
                     }
                 }
             case .failure(let error):
-                print("\(error)")
+                print(error)
             }
         }
     }
