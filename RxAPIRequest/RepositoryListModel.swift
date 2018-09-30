@@ -13,20 +13,21 @@ struct RepositoryListModel {
     typealias ResponseType = RepositoryList
 
     private let apiClient: APIClient<ResponseType>
+    private let userIdentifierParameterKey = "user_identifier"
 
     init(apiClient: APIClient<ResponseType> = APIClient()) {
         self.apiClient = apiClient
     }
 
     func request(userIdentifier: String, completion: @escaping (Result<ResponseType>) -> Void) {
-        let parameters = ["user_identifier": userIdentifier]
+        let parameters = [userIdentifierParameterKey: userIdentifier]
         apiClient.request(api: .repositoryList(parameters)) { result in
             completion(result)
         }
     }
 
     func rxRequest(userIdentifier: String) -> Observable<ResponseType> {
-        let parameters = ["user_identifier": userIdentifier]
+        let parameters = [userIdentifierParameterKey: userIdentifier]
         return apiClient.rxRequest(api: .repositoryList(parameters))
     }
 }
