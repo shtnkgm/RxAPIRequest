@@ -132,17 +132,12 @@
 		DACBB051215E43CA00053ABE /* RxAPIRequest */ = {
 			isa = PBXGroup;
 			children = (
+				DACBB096216078E800053ABE /* Model */,
 				DACBB072215ECB9000053ABE /* API */,
 				DACBB052215E43CB00053ABE /* AppDelegate.swift */,
 				DACBB054215E43CB00053ABE /* ViewController.swift */,
 				DACBB080215ED37800053ABE /* ViewController.xib */,
 				DACBB094215FCF5900053ABE /* Result.swift */,
-				DACBB090215FC40200053ABE /* APIClient.swift */,
-				DACBB08A215FAC3D00053ABE /* UserInfoModel.swift */,
-				DACBB07A215ED1B700053ABE /* UserInfo.swift */,
-				DACBB08C215FAC7B00053ABE /* RepositoryListModel.swift */,
-				DACBB07C215ED1C200053ABE /* Repository.swift */,
-				DACBB07E215ED1CE00053ABE /* RepositoryList.swift */,
 				DACBB059215E43CC00053ABE /* Assets.xcassets */,
 				DACBB05B215E43CC00053ABE /* LaunchScreen.storyboard */,
 				DACBB05E215E43CC00053ABE /* Info.plist */,
@@ -175,6 +170,19 @@
 				DACBB083215ED91400053ABE /* .swiftlint.yml */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		DACBB096216078E800053ABE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DACBB090215FC40200053ABE /* APIClient.swift */,
+				DACBB08A215FAC3D00053ABE /* UserInfoModel.swift */,
+				DACBB07A215ED1B700053ABE /* UserInfo.swift */,
+				DACBB08C215FAC7B00053ABE /* RepositoryListModel.swift */,
+				DACBB07C215ED1C200053ABE /* Repository.swift */,
+				DACBB07E215ED1CE00053ABE /* RepositoryList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
