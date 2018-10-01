@@ -44,7 +44,7 @@ final class ViewController: UIViewController {
                 self.label.text = "loading..."
                 print("Rxリクエストボタンタップ")
             })
-            .flatMapLatest { self.userInfoModel.rxRequest() }
+            .flatMap { self.userInfoModel.rxRequest() }
             .do(onNext: { _ in print("UserInfoリクエスト成功") })
             .flatMap { self.repositoryListModel.rxRequest(userIdentifier: $0.identifier) }
             .do(onNext: { _ in print("RepositoryListリクエスト成功") })
@@ -55,20 +55,17 @@ final class ViewController: UIViewController {
     }
 
     @IBAction private func requestButtonTapped(_ sender: UIButton) {
-        print("リクエストボタンタップ")
         label.text = "loading..."
-        getUserInfo()
+        apiRequest()
     }
-
-    private func getUserInfo() {
+    
+    private func apiRequest() {
         userInfoModel.request { [weak self] result in
             switch result {
             case .success(let userInfo):
-                print("UserInfoリクエスト成功")
                 self?.repositoryListModel.request(userIdentifier: userInfo.identifier) { result in
                     switch result {
                     case .success(let repositoryList):
-                        print("RepositoryListリクエスト成功")
                         self?.label.text = repositoryList.map { $0.title }.joined(separator: "\n")
                     case .failure(let error):
                         print(error)

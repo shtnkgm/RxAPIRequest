@@ -84,6 +84,7 @@ struct APIClient<T: Codable> {
                             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                             let data = try jsonDecoder.decode(T.self, from: jsonData)
                             observer.onNext(data)
+                            observer.onCompleted()
                         } catch {
                             observer.onError(APIClientError.parseError(error))
                         }
